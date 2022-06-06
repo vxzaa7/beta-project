@@ -1,0 +1,23 @@
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+	background-image: url(../img/header/2.jpg);
+	background-position: center center;
+	background-size: cover;
+
+	@include pad {
+		background-position: right;
+	}
+
+	.title {
+		color: $base-light;
+		font-size: 1.6rem;
+		padding-bottom: 300px;
+		padding-left: 200px;
+	}
+
+
+
+}
