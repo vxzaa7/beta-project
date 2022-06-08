@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap");
 * {
   margin: 0;
@@ -7,6 +8,25 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Noto Sans TC', sans-serif;
+}
+
+.news h1, .about__txt h1, .works__wrap h1 {
+  width: 100px;
+  display: inline;
+  font-size: 2rem;
+  border-bottom: 4px #093942 solid;
+}
+
+.news__item a, .about__txt a {
+  color: #093942;
+  -webkit-transition: all 400ms ease-in;
+  transition: all 400ms ease-in;
+  text-align: right;
+  padding-right: 15px;
+}
+
+.news__item a:hover, .about__txt a:hover {
+  color: darkorange;
 }
 
 @media (max-width: 859px) {
@@ -45,6 +65,28 @@ header .title {
   padding-left: 200px;
 }
 
+.custom-shape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.custom-shape svg {
+  position: relative;
+  display: block;
+  width: calc(130% + 1.3px);
+  height: 69px;
+}
+
+.custom-shape .shape-fill {
+  fill: #FFFFFF;
+}
+
 .main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -67,7 +109,7 @@ header .title {
   cursor: pointer;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 420px) {
   .main-nav__logo img {
     width: 70px;
   }
@@ -127,12 +169,13 @@ header .title {
 
 @media (max-width: 859px) {
   .main-nav__list {
-    background: rgba(9, 57, 66, 0.8);
+    background: #093942;
     position: absolute;
+    z-index: 2;
     margin: 0;
     top: 0;
     right: 0;
-    width: 40vw;
+    width: 100vw;
     height: 92vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -168,9 +211,12 @@ header .title {
   cursor: pointer;
   position: absolute;
   right: 0;
-  z-index: 2;
+  z-index: 3;
   display: none;
-  margin-right: 10px;
+  margin: 10px 10px;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+  background-color: #f5f5f5;
 }
 
 @media (max-width: 859px) {
@@ -186,7 +232,7 @@ header .title {
   margin: 6px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 420px) {
   .main-nav .mobile-nav .item {
     width: 24px;
   }
@@ -270,6 +316,218 @@ header .title {
             animation-timing-function: ease-in;
     -webkit-transform: translate3d(0, 65px, 0);
             transform: translate3d(0, 65px, 0);
+  }
+}
+
+.news {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 100px auto 0 auto;
+}
+
+.news__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 859px) {
+  .news__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.news__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 20px;
+}
+
+@media (max-width: 420px) {
+  .news__item {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+
+.news__item h2 {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  color: #093942;
+}
+
+@media (max-width: 859px) {
+  .news__item h2 {
+    margin-top: 10px;
+  }
+}
+
+.news__item p {
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+}
+
+.news .frist,
+.news .second {
+  border-right: 1px #093942 solid;
+}
+
+@media (max-width: 859px) {
+  .news .frist,
+  .news .second {
+    padding-bottom: 25px;
+    border-right: none;
+    border-bottom: 1px #093942 solid;
+  }
+}
+
+.about {
+  margin-top: 250px;
+}
+
+@media (max-width: 859px) {
+  .about {
+    margin-top: 100px;
+  }
+}
+
+.about__wrap {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+}
+
+@media (max-width: 859px) {
+  .about__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.about__img {
+  width: 500px;
+  margin: 0 auto;
+}
+
+@media (max-width: 859px) {
+  .about__img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 420px) {
+  .about__img {
+    width: 100%;
+  }
+}
+
+.about__img img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.about__txt {
+  width: 50%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 859px) {
+  .about__txt {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.about__txt h1 {
+  margin-left: 25px;
+}
+
+.about__txt p {
+  padding: 0 50px;
+  line-height: 2rem;
+}
+
+@media (max-width: 859px) {
+  .about__txt p {
+    margin-top: 15px;
+  }
+}
+
+.works {
+  background-image: url(../../img/work/平面底圖.svg);
+  background-position: center right;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background: -webkit-gradient(linear, left top, right top, from(#ffffff), color-stop(10%, #093942), color-stop(90%, #093942), to(#e5e5e5));
+  background: linear-gradient(to right, #ffffff 0%, #093942 10%, #093942 90%, #e5e5e5 100%);
+  width: 80%;
+  margin: 150px auto;
+  padding: 50px 0;
+}
+
+@media (max-width: 420px) {
+  .works {
+    width: 100%;
+  }
+}
+
+.works__wrap {
+  text-align: center;
+}
+
+.works__wrap h1 {
+  color: #f5f5f5;
+  border-bottom: 2px solid #f5f5f5;
+}
+
+.works__wrap ul {
+  margin-top: 30px;
+  color: #f5f5f5;
+  line-height: 2rem;
+}
+
+@media (max-width: 420px) {
+  .works__wrap ul {
+    font-size: 0.8rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

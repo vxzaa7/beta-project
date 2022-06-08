@@ -16,8 +16,29 @@ header {
 		font-size: 1.6rem;
 		padding-bottom: 300px;
 		padding-left: 200px;
+
+		@include mobile {}
 	}
 
+}
 
+.custom-shape {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	transform: rotate(180deg);
 
+	svg {
+		position: relative;
+		display: block;
+		width: calc(130% + 1.3px);
+		height: 69px;
+	}
+
+	.shape-fill {
+		fill: #FFFFFF;
+	}
 }

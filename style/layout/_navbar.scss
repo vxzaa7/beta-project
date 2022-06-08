@@ -56,12 +56,13 @@
 		}
 
 		@include pad {
-			background: rgba($color: $base-color, $alpha: 0.8);
+			background: $base-color;
 			position: absolute;
+			z-index: 2;
 			margin: 0;
 			top: 0;
 			right: 0;
-			width: 40vw;
+			width: 100vw;
 			height: 92vh;
 			flex-direction: column;
 			align-items: center;
@@ -83,7 +84,7 @@
 		transition: all 400ms ease-in-out;
 
 		&:hover {
-			background: darkorange;
+			background: $base-other;
 		}
 	}
 
@@ -91,9 +92,12 @@
 		cursor: pointer;
 		position: absolute;
 		right: 0;
-		z-index: 2;
+		z-index: 3;
 		display: none;
-		margin-right: 10px;
+		margin: 10px 10px;
+		padding: 10px;
+		border-radius: 0 0 10px 10px;
+		background-color: $base-light;
 
 		@include pad {
 			display: block;
