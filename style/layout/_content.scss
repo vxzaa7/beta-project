@@ -1,0 +1,140 @@
+.container {
+	width: 100%;
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+
+		h2 {
+			margin: 10px auto;
+			font-weight: bold;
+		}
+
+		.sub__btn {
+			background-color: $base-color;
+			padding: 10px;
+			color: $base-light;
+			border-radius: 10%;
+			display: block;
+			margin: 20px auto;
+		}
+	}
+
+	&__main {
+		width: 60%;
+		margin: 100px auto;
+
+		@include pad {
+			width: 80%;
+		}
+
+
+		h2 {
+			text-align: center;
+			font-weight: bold;
+		}
+	}
+
+	&__wrap {
+		color: $base-light;
+		background-color: $base-color;
+	}
+
+	&__txt {
+		padding: 20px 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+
+
+		flex-direction: column;
+
+
+	}
+
+	&__num {
+		width: 50%;
+		margin: 10px 0px;
+		border-right: none;
+		text-align: center;
+
+		border-bottom: 1px $base-light solid;
+
+		@include pad {}
+
+		@include mobile {
+			width: 100%;
+
+		}
+
+	}
+
+	h4 {
+		text-align: center;
+		font-size: 1rem;
+		padding-bottom: 20px;
+
+		@include mobile {
+			font-size: 0.6rem;
+		}
+	}
+
+	.email {
+		width: 50%;
+		font-size: 1.3rem;
+
+		@include mobile {
+			width: 100%;
+			font-size: 1rem;
+		}
+
+	}
+}
+
+form {
+	margin-bottom: 50px;
+
+
+}
+
+.form-group {
+	display: flex;
+	justify-content: center;
+
+
+	.container__title {
+		display: flex;
+		flex-direction: column;
+		color: $base-light;
+		background-color: $base-color;
+		width: 20%;
+		margin-right: 20px;
+
+		@include pad {
+			width: 40%;
+		}
+
+		@include mobile {
+			width: 50%;
+		}
+
+
+		label {
+			margin-top: 25px;
+			margin-left: 20px;
+		}
+
+
+	}
+
+	.container__input {
+		width: 40%;
+
+		input,
+		textarea {
+			margin-top: 15px;
+		}
+
+
+	}
+}

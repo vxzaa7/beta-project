@@ -1,0 +1,63 @@
+footer {
+	margin-top: 100px;
+	width: 100%;
+	height: 200px;
+	background-color: $base-color;
+	justify-content: space-around;
+	align-items: center;
+	display: flex;
+
+	@include pad {
+		height: 400px;
+		flex-direction: column;
+	}
+
+	img {
+		width: 150px;
+	}
+
+	.footer__content {
+		color: $base-light;
+		display: flex;
+
+		@include pad {
+			flex-direction: column;
+		}
+
+
+		ul {
+			margin-bottom: 0;
+			padding-left: 0;
+
+			@include pad {
+				margin-top: 20px;
+			}
+
+			li {
+				line-height: 1.8rem;
+			}
+
+
+		}
+
+		.ul__second {
+			margin-left: 200px;
+
+			@include pad {
+				margin-left: 0;
+			}
+
+		}
+	}
+
+
+	#btn {
+		border: none;
+		color: $base-light;
+		background: none;
+
+		&:hover {
+			color: $base-other;
+		}
+	}
+}

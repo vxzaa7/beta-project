@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"
+				content="IE=edge">
+	<meta name="viewport"
+				content="width=device-width, initial-scale=1.0">
+	<title>貝塔工程股份有限公司｜聯絡</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+				rel="stylesheet"
+				integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+				crossorigin="anonymous">
+
+	<link rel="stylesheet"
+				href="./style/style.css">
+</head>
+
+
+<body style="overflow-x: hidden; background-color: #f5f5f5;">
+	<nav class="dark-nav">
+		<div class="dark-nav__logo">
+			<img src="./img/header/logo.svg"
+					 alt="beta-logo">
+		</div>
+		<div class="mobile-nav">
+			<div class="item line-1"></div>
+			<div class="item line-2"></div>
+			<div class="item line-3"></div>
+		</div>
+		<ul class="dark-nav__list">
+			<li><a href="./index.html">首頁</a></li>
+			<li><a href="./about/about.html">關於貝塔</a></li>
+			<li><a href="#">最新消息</a></li>
+			<li><a href="#">貝塔實績</a></li>
+			<li class="dark-nav__item"><a href="./container.html">聯絡詢價</a></li>
+		</ul>
+	</nav>
+	<main class="container">
+		<div class="container__main">
+			<h2>電話＆信箱聯繫</h2>
+			<div class="container__wrap">
+
+				<div class="container__txt">
+					<div class="container__num">
+						<h3>TEL 02 - 2766-7421</h3>
+						<h3>FAX 02 - 2433-7381</h3>
+					</div>
+					<div class="container__email">
+						<h3 class="email"> vn0003611@yahoo.com.tw</h3>
+					</div>
+				</div>
+
+				<h4>服務時間：9:00~17:00 (日・國定日除外）</h4>
+
+			</div>
+		</div>
+		<div class="container__form">
+
+			<h2>表單聯繫</h2>
+			<form target="_blank"
+						action="https://formsubmit.co/ff06ff9479efbcaa8f754a3880330a57"
+						method="POST">
+				<div class="form-group">
+
+					<div class="container__title">
+						<label for="company">公司名稱</label>
+						<label for="name">姓名*</label>
+						<label for="email">信箱*</label>
+						<label for="telNo">聯絡電話*</label>
+						<label for="telNo">詢問項目*（至少一項）</label>
+						<label for="message">詳細內容*</label>
+					</div>
+
+					<div class="container__input">
+
+						<input type="text"
+									 name="company"
+									 class="form-control"
+									 placeholder="守信用有限公司">
+
+
+						<input type="text"
+									 name="name"
+									 class="form-control"
+									 placeholder="王大明先生/小姐"
+									 required>
+
+						<input type="email"
+									 name="email"
+									 class="form-control"
+									 placeholder="your@email.com"
+									 required>
+
+						<input type="tel"
+									 name="telNo"
+									 class="form-control"
+									 placeholder="03-4785-643"
+									 size="20"
+									 minlength="9"
+									 maxlength="14"
+									 required>
+
+						<select required
+										id="menu"
+										style="margin-top: 10px;"
+										onchange="menuInput();">
+							<option></option>
+							<optgroup label="------基樁------"></optgroup>
+							<option>預壘樁</option>
+							<option>微型樁</option>
+							<option>托基樁</option>
+							<option>鋼板樁</option>
+							<option>PC樁</option>
+							<option>止水樁</option>
+							<optgroup label="------出租------"></optgroup>
+							<option>套管出租</option>
+							<option>托基套管出租</option>
+							<option>各式鑽孔機出租</option>
+							<option>各式挖土機出租</option>
+							<optgroup label="----安全結構----"></optgroup>
+							<option>水土保持</option>
+							<option>水源探勘</option>
+							<option>建築物傾斜扶正</option>
+							<option>安全支撐</option>
+							<option>構臺架構</option>
+							<option>工法設計</option>
+							<option>其他</option>
+						</select>
+
+						<select id="menuTwo"
+										style="margin-top: 10px;"
+										onchange="menuInput();">
+							<option></option>
+							<optgroup label="------基樁------"></optgroup>
+							<option>預壘樁</option>
+							<option>微型樁</option>
+							<option>托基樁</option>
+							<option>鋼板樁</option>
+							<option>PC樁</option>
+							<option>止水樁</option>
+							<optgroup label="------出租------"></optgroup>
+							<option>套管出租</option>
+							<option>托基套管出租</option>
+							<option>各式鑽孔機出租</option>
+							<option>各式挖土機出租</option>
+							<optgroup label="----安全結構----"></optgroup>
+							<option>水土保持</option>
+							<option>水源探勘</option>
+							<option>建築物傾斜扶正</option>
+							<option>安全支撐</option>
+							<option>構臺架構</option>
+							<option>工法設計</option>
+							<option>其他</option>
+						</select>
+
+						<select id="menuThree"
+										style="margin-top: 10px;"
+										onchange="menuInput();">
+							<option></option>
+							<optgroup label="------基樁------"></optgroup>
+							<option>預壘樁</option>
+							<option>微型樁</option>
+							<option>托基樁</option>
+							<option>鋼板樁</option>
+							<option>PC樁</option>
+							<option>止水樁</option>
+							<optgroup label="------出租------"></optgroup>
+							<option>套管出租</option>
+							<option>托基套管出租</option>
+							<option>各式鑽孔機出租</option>
+							<option>各式挖土機出租</option>
+							<optgroup label="----安全結構----"></optgroup>
+							<option>水土保持</option>
+							<option>水源探勘</option>
+							<option>建築物傾斜扶正</option>
+							<option>安全支撐</option>
+							<option>構臺架構</option>
+							<option>工法設計</option>
+							<option>其他</option>
+						</select>
+						<textarea placeholder="請詳細描述您的需求"
+											class="form-control"
+											name="message"
+											rows="10"
+											required></textarea>
+						<input type="text"
+									 name="Work-menu"
+									 id="menu__input"
+									 style="height: 1px; transform: translateX(500%);">
+					</div>
+
+				</div>
+				<button type="submit"
+								class="sub__btn"
+								style="">送出表單</button>
+				<input type="text"
+							 name="_honey"
+							 style="display:none">
+				<input type="hidden"
+							 name="_template"
+							 value="box">
+
+			</form>
+		</div>
+	</main>
+	<script src="./js/all.js"></script>
+</body>
+
+</html>
