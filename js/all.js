@@ -67,13 +67,13 @@ let list = document.querySelector('.project__list');
 function rander(data){
 	let str = '';
 	data.forEach((i)=>{
-			str+=`<div class="project__item" data-id="${i.id}">
+			str+=`<div class="project__item" data-sort="${i.sort}">
 			<img src="./img/project/${i.imgName}"
 			alt="">
 
 					<div class="project__txt">
 						<p>${i.name}</p>
-						<a href="#" class="project__more">more <svg xmlns="http://www.w3.org/2000/svg"
+						<a href="#" class="project__more" onclick="morePost(${i.id})">more <svg xmlns="http://www.w3.org/2000/svg"
 									 width="16"
 									 height="16"
 									 fill="currentColor"
@@ -90,6 +90,42 @@ function rander(data){
 }
 rander(data);
 
+let moreList = document.querySelector('.carousel-inner');
+	const morePost = (id) => {
+		const postInfo = data.find((i) => i.id === id);
+
+		 moreList.innerHTML = `<div class="carousel-item active">
+		 <img src="./img/project/${postInfo.imgName}"
+					class="d-block w-100"
+					alt="...">
+		 <div class="carousel-caption d-none d-md-block">
+			 <h5>${postInfo.name}</h5>
+			 <p>${postInfo.txt}</p>
+		 </div>
+	 </div>
+	 <div class="carousel-item">
+		 <img src="./img/project/${postInfo.imgName2}"
+					class="d-block w-100"
+					alt="...">
+		 <div class="carousel-caption d-none d-md-block">
+			 <h5>${postInfo.name}</h5>
+			 <p>${postInfo.txt}</p>
+		 </div>
+	 </div>
+	 <div class="carousel-item">
+		 <img src="./img/project/${postInfo.imgName3}"
+					class="d-block w-100"
+					alt="...">
+		 <div class="carousel-caption d-none d-md-block">
+			 <h5>${postInfo.name}</h5>
+			 <p>${postInfo.txt}</p>
+		 </div>
+	 </div>
+	 `;
+	 mask.classList.add('active');
+	 carousel.classList.remove('active');
+	};
+
 
 
 
@@ -99,14 +135,37 @@ let carousel = document.querySelector(".carousel-all");
 let close = document.querySelector(".close");
 
 
-more.forEach((i) => {
-	i.addEventListener('click', function () {
-		mask.classList.add('active');
-		carousel.classList.remove('active');
-	})
-});
-
 close.addEventListener('click', function () {
 	mask.classList.remove('active');
 		carousel.classList.add('active');
 })
+
+
+
+
+const tab = document.querySelector('.btn-group');
+let sort = '全部';
+tab.addEventListener('click', function(e){
+	sort = e.target.dataset.sort;
+  let tabs = document.querySelectorAll('.btn-group button');
+  tabs.forEach((i) => {
+    i.classList.remove('active');
+  });
+  e.target.classList.add('active');
+  upData();
+})
+
+
+function upData() {
+	let newData = [];
+    if (sort == '全部') {
+			newData = data;
+		} else if (sort == '基樁') {
+			newData = data.filter((i) => i.sort == '基樁');
+		} else if (sort == '出租') {
+			newData = data.filter((i) => i.sort == '出租');
+		} else {
+			newData = data.filter((i) => i.sort == '安全結構');
+		}
+		rander(newData);
+  };

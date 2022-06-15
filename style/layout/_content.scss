@@ -53,19 +53,18 @@
 	}
 
 	&__num {
-		width: 50%;
+		width: 80%;
 		margin: 10px 0px;
 		border-right: none;
 		text-align: center;
 
 		border-bottom: 1px $base-light solid;
 
-		@include pad {}
-
-		@include mobile {
+		@include pad {
 			width: 100%;
-
 		}
+
+
 
 	}
 
