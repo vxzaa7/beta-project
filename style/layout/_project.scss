@@ -1,16 +1,108 @@
-.card {
-	box-shadow: 10px 10px 10px rgb(239, 248, 255);
+.project {
 
-	.card-body {
-		.btn {
-			border: 1px solid $base-color;
-			color: $base-color;
 
-			&:hover {
-				background-color: $base-color;
-				color: $base-light;
-			}
+	&__main {}
+
+	&__wrap {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		min-height: 90vh;
+
+		h1 {
+			padding-top: 40px;
+			font-weight: bold;
+		}
+	}
+
+	&__list {
+		width: 80%;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-bottom: 50px;
+	}
+
+	&__item {
+		margin: 20px 20px;
+		transition: all .2s ease;
+
+		img {
+			width: 280px;
+			height: 180px;
+
+
+
 		}
 
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+
+	&__txt {
+		display: flex;
+		justify-content: space-between;
+
+		p {
+			font-weight: bold;
+			margin: 0;
+			color: $base-color;
+		}
+
+		a {
+			color: $base-color;
+			text-decoration: none;
+			transition: color 400ms ease;
+
+			&:hover {
+				color: $base-other;
+			}
+		}
+	}
+}
+
+.layoutMask {
+	display: none;
+
+	&.active {
+		display: block;
+		width: 100%;
+		position: fixed;
+		z-index: 4;
+		top: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.6);
+
+		svg {
+			position: fixed;
+			top: 10px;
+			right: 10px;
+			color: #fff;
+			cursor: pointer;
+
+			@include pad {
+				top: 30px;
+			}
+		}
+	}
+
+}
+
+.carousel-all {
+	width: 60% !important;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 5;
+
+	@include pad {
+		width: 100% !important;
+	}
+
+	&.active {
+		display: none;
 	}
 }
