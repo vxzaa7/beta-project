@@ -1,70 +1,136 @@
 .news {
-	width: 80%;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin: 100px auto 0 auto;
-
-	h1 {
-		@extend %title-setting;
+	&__main {
+		position: relative;
+		background-color: $base-light;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
 	}
 
-	&__list {
+	&__title {
+		background-image: url(../../img/about/bg.png);
+		background-position: center;
+		object-fit: cover;
+		height: 30vh;
 		display: flex;
-		margin-top: 20px;
-		justify-content: center;
+		flex-direction: column;
+		justify-content: space-around;
+		box-shadow: 10px 10px 20px #ebebeb;
 
-		@include pad {
-			flex-direction: column;
+		h1 {
+			font-weight: bold;
+			text-align: center;
 		}
 	}
 
-	&__item {
-		flex: 1;
+
+	&__list {
+
+		ul {
+			margin: 50px auto;
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+		}
+
+		li {
+			display: inline-flex;
+			border-bottom: 1px solid #1b1b1b;
+			justify-content: space-between;
+			align-items: center;
+
+
+			padding: 15px 0px;
+
+			&:first-child {
+				border-top: 1px solid #1b1b1b;
+			}
+
+			h3,
+			p {
+				margin-bottom: 0;
+			}
+
+			h3 {
+				font-size: 1rem;
+				font-weight: bold;
+			}
+
+			p {
+				margin: 10px 50px;
+			}
+
+			a {
+				text-decoration: none;
+				color: $base-color;
+				transition: all 400ms;
+
+				&:hover {
+					color: $base-other;
+				}
+			}
+		}
+	}
+
+	&__box {
+		position: absolute;
+		top: 20%;
+		left: 20%;
+		width: 60%;
+		min-height: 50vh;
+		padding: 50px 60px;
+		background-color: $base-light2;
+		box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
 		display: flex;
 		flex-direction: column;
-		padding: 0 20px;
+		justify-content: space-around;
 
-		@include mobile {
-			width: 100%;
-			margin: 20px 0;
+		@include pad {
+			width: 80%;
+			left: 10%;
+		}
+
+		h3 {
+			font-size: 1.2rem;
 		}
 
 		h2 {
-			font-size: 1rem;
-			letter-spacing: 0.1rem;
-			font-weight: 400;
-			color: $base-color;
-
-			@include pad {
-				margin-top: 10px;
-			}
+			margin: 20px 0;
+			font-size: 1.5rem;
 		}
 
 		a {
+			display: block;
+			text-align: center;
+			text-decoration: none;
+			color: $base-color;
+			transition: all 400ms ease;
 
-			@extend %more-setting;
+			&:hover {
+				color: $base-other;
+			}
 		}
 
-		p {
-			letter-spacing: 0.1rem;
-			font-weight: bold;
-
-		}
-
-	}
-
-	.frist,
-	.second {
-		border-right: 1px $base-color solid;
-
-		@include pad {
-			padding-bottom: 25px;
-			border-right: none;
-			border-bottom: 1px $base-color solid;
+		img {
+			width: 100%;
+			height: 100%;
 		}
 	}
 
+	&__img {
+		width: 560px;
 
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__wrap {
+		min-height: 600px;
+
+		@include mobile {
+			min-height: 80vh;
+		}
+	}
 }

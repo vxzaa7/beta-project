@@ -1,0 +1,35 @@
+.product {
+	&__main {
+		margin: 30px 0;
+		min-height: 80vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+	}
+
+	&__slide {
+
+		width: 50%;
+		margin: 0 auto;
+
+		@include pad {
+			width: 100%;
+		}
+	}
+
+
+	&__text {
+		width: 50%;
+		margin: 0 auto;
+
+		span {
+			font-size: 1.2rem;
+		}
+
+		@include pad {
+			width: 80%;
+		}
+	}
+}

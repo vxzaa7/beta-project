@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap');
 @import './base/reset';
+@import './layout/intro';
 @import './layout/body';
 @import './layout/header';
 @import './layout/navbar';
 @import './layout/scroll';
 @import './layout/main';
-@import './layout/news';
+@import './layout/info';
 @import './layout/about';
 @import './layout/works';
 @import './layout/cards';
@@ -17,3 +18,12 @@
 
 //project
 @import './layout/project';
+
+//about
+@import './layout/about';
+
+//news
+@import './layout/news';
+
+//product
+@import './layout/product';

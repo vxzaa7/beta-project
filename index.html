@@ -12,12 +12,19 @@
 				rel="stylesheet"
 				integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
 				crossorigin="anonymous">
-
+	<link rel="stylesheet"
+				href="https://unpkg.com/aos@next/dist/aos.css" />
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<link rel="stylesheet"
 				href="./style/style.css">
 </head>
 
 <body>
+	<div class="intro">
+		<h1 class="logo-loading">
+			<span class="logo">BE</span><span class="logo">TA</span>
+		</h1>
+	</div>
 	<header>
 		<nav class="main-nav">
 			<div class="main-nav__logo">
@@ -30,16 +37,20 @@
 				<div class="item line-3"></div>
 			</div>
 			<ul class="main-nav__list">
-				<li><a href="#">首頁</a></li>
-				<li><a href="./about/about.html">關於貝塔</a></li>
-				<li><a href="#">最新消息</a></li>
+				<li><a href="./index.html">首頁</a></li>
+				<li><a href="./about.html">關於貝塔</a></li>
+				<li><a href="./news.html">最新工事</a></li>
 				<li><a href="./project.html">貝塔實績</a></li>
 				<li class="main-nav__item"><a href="container.html">聯絡詢價</a></li>
 			</ul>
 		</nav>
-		<!-- <div class="title">
+		<div class="title"
+				 data-aos="fade-left">
 			<h1>設計｜品質｜責任</h1>
-		</div> -->
+		</div>
+		<div class="title">
+			<h1></h1>
+		</div>
 	</header>
 	<div class="custom-shape">
 		<svg data-name="Layer 1"
@@ -65,24 +76,27 @@
 	</div>
 
 	<main class="main">
-		<article class="news">
+		<article class="info"
+						 data-aos="fade-up"
+						 data-aos-anchor-placement="center-bottom">
+
 			<h1>NEW!</h1>
-			<div class="news__list">
-				<article class="news__item frist">
+			<div class="info__list">
+				<article class="info__item frist">
 					<h2>2018年6月22日</h2>
 					<p>Lorem ipsum dolor sit amet consectetur,
 					</p>
 					<a href="#">more</a>
 				</article>
 
-				<article class="news__item second">
+				<article class="info__item second">
 					<h2>2020年4月24日</h2>
 					<p>Lorem ipsum dolor sit amet consectetur, adipisicing
 					</p>
 					<a href="#">more</a>
 				</article>
 
-				<article class="news__item">
+				<article class="info__item">
 					<h2>2022年6月24日</h2>
 					<p>Lorem ipsum dolor sit illo natus consequuntur nam deserunt.
 					</p>
@@ -274,10 +288,16 @@
 				</svg></a>
 		</div>
 	</footer>
+	<script src="./js/intro.js"></script>
+	<script src="./js/AOS.js"></script>
+
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
 					integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
 					crossorigin="anonymous"></script>
 	<script src="./js/all.js"></script>
+
+
+
 </body>
 
 </html>

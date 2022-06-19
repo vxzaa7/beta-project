@@ -13,11 +13,21 @@ header {
 
 	.title {
 		color: $base-light;
-		font-size: 1.6rem;
-		padding-bottom: 300px;
-		padding-left: 200px;
 
-		@include mobile {}
+		margin-left: 80px;
+
+		h1 {
+			font-size: 3rem;
+		}
+
+		@include mobile {
+			margin-bottom: 50px;
+			margin-left: 30px;
+
+			h1 {
+				font-size: 2rem;
+			}
+		}
 	}
 
 }
