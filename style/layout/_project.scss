@@ -1,0 +1,144 @@
+.project {
+
+	&__main {}
+
+	&__wrap {
+		min-height: 90vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		h1 {
+			padding-top: 40px;
+			font-weight: bold;
+			color: $base-color;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__list {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin: 20px 0px 30px 0px;
+
+
+	}
+
+	&__item {
+		margin: 20px 20px;
+		transition: all .5s ease;
+
+		img {
+			width: 280px;
+			height: 180px;
+
+
+
+		}
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+
+	&__txt {
+		display: flex;
+		justify-content: space-between;
+
+		p {
+			font-weight: bold;
+			margin: 0;
+			color: $base-color;
+		}
+
+		a {
+			color: $base-color;
+			text-decoration: none;
+			transition: color 400ms ease;
+
+			&:hover {
+				color: $base-other;
+			}
+		}
+	}
+}
+
+.layoutMask {
+	display: none;
+
+	&.active {
+		display: block;
+		width: 100%;
+		position: fixed;
+		z-index: 4;
+		top: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.8);
+
+		svg {
+			position: fixed;
+			top: 10px;
+			right: 10px;
+			color: #fff;
+			cursor: pointer;
+
+			@include pad {
+				top: 30px;
+			}
+		}
+	}
+
+}
+
+.carousel-all {
+	width: 60% !important;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 5;
+
+	@include pad {
+		width: 100% !important;
+	}
+
+	&.active {
+		display: none;
+	}
+}
+
+.btn-outline-primary {
+	border-color: $base-color;
+
+	&.active {
+		border-color: $base-color;
+	}
+
+	&.active:hover {
+		border-color: $base-color;
+	}
+}
+
+.sortBtn {
+	background-color: $base-light;
+	color: $base-color;
+
+	&:hover {
+		background-color: $base-other;
+		border-color: $base-color;
+		color: $base-light;
+	}
+
+	&.active {
+		background-color: $base-color;
+		color: $base-light;
+	}
+
+
+}
+
+.carousel-caption {
+	background-color: rgba(0, 0, 0, 0.6);
+}

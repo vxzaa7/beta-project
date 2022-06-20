@@ -1,0 +1,35 @@
+.works {
+	background-image: url(../../img/work/平面底圖.svg);
+	background-position: center right;
+	object-fit: cover;
+	background: linear-gradient(to right, #ffffff 0%, #093942 10%, #093942 90%, #e5e5e5 100%);
+
+	width: 80%;
+	margin: 150px auto;
+	padding: 50px 0;
+
+	@include mobile {
+		width: 100%;
+	}
+
+	&__wrap {
+		text-align: center;
+
+		h1 {
+			@extend %title-setting;
+			color: $base-light ;
+			border-bottom: 2px solid $base-light;
+		}
+
+		ul {
+			margin-top: 30px;
+			color: $base-light;
+			line-height: 2rem;
+
+			@include mobile {
+				font-size: 0.8rem;
+			}
+
+		}
+	}
+}

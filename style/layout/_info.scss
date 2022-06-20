@@ -1,0 +1,70 @@
+.info {
+	width: 80%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 100px auto 0 auto;
+
+	h1 {
+		@extend %title-setting;
+	}
+
+	&__list {
+		display: flex;
+		margin-top: 20px;
+		justify-content: center;
+
+		@include pad {
+			flex-direction: column;
+		}
+	}
+
+	&__item {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		padding: 0 20px;
+		border-right: 1px $base-color solid;
+
+		&:last-child {
+			border: 0;
+		}
+
+		@include pad {
+			padding-bottom: 25px;
+			border-right: none;
+			border-bottom: 1px $base-color solid;
+		}
+
+		@include mobile {
+			width: 100%;
+			margin: 20px 0;
+		}
+
+		h2 {
+			font-size: 1rem;
+			letter-spacing: 0.1rem;
+			font-weight: 400;
+			color: $base-color;
+
+			@include pad {
+				margin-top: 10px;
+			}
+		}
+
+		a {
+
+			@extend %more-setting;
+		}
+
+		p {
+			letter-spacing: 0.1rem;
+			font-weight: bold;
+
+		}
+
+	}
+
+
+}

@@ -1,0 +1,40 @@
+.hidden {
+	overflow: hidden;
+	font-family: 'Bauhaus 93';
+	color: $base-light;
+}
+
+li {
+	margin: 10px 10px;
+
+}
+
+.nav-link {
+	color: $base-light  !important;
+	position: relative;
+	display: inline-block;
+
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		width: 100%;
+		height: 2px;
+		background-color: $base-other;
+		transform-origin: center;
+		transform: translate(-50%, 0) scaleX(0);
+		transition: transform 0.3s ease-in-out;
+	}
+
+	&:hover::before {
+		transform: translate(-50%, 0) scaleX(1);
+	}
+}
+
+
+
+.container__wrap {
+	background-color: $base-color;
+}

@@ -1,0 +1,54 @@
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+	background-image: url(../img/header/2.jpg);
+	background-position: center center;
+	background-size: cover;
+
+	@include pad {
+		background-position: right;
+	}
+
+	.title {
+		color: $base-light;
+
+		margin-left: 80px;
+
+		h1 {
+			font-size: 3rem;
+		}
+
+		@include mobile {
+			margin-bottom: 50px;
+			margin-left: 30px;
+
+			h1 {
+				font-size: 2rem;
+			}
+		}
+	}
+
+}
+
+.custom-shape {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	transform: rotate(180deg);
+
+	svg {
+		position: relative;
+		display: block;
+		width: calc(130% + 1.3px);
+		height: 69px;
+	}
+
+	.shape-fill {
+		fill: #FFFFFF;
+	}
+}
