@@ -1,4 +1,4 @@
-.container {
+.content {
 	width: 100%;
 
 	&__form {
@@ -101,7 +101,7 @@ form {
 	justify-content: center;
 
 
-	.container__title {
+	.content__title {
 		display: flex;
 		flex-direction: column;
 		color: $base-light;
@@ -126,7 +126,7 @@ form {
 
 	}
 
-	.container__input {
+	.content__input {
 		width: 40%;
 
 		input,
