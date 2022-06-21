@@ -1016,7 +1016,7 @@ form {
 }
 
 .news__title {
-  background-image: url(../../img/about/bg.png);
+  background-image: url(../../img/news-page/bg-i.svg);
   background-position: center;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1266,7 +1266,7 @@ form {
 .stroy__logo {
   height: 100vh;
   width: 90%;
-  background-image: url(../../img/about/stroy-Logo.svg);
+  background-image: url(../../img/story/stroy-Logo.svg);
   background-position: 100% 50%;
   background-size: contain;
   background-repeat: no-repeat;
