@@ -33,7 +33,7 @@ data-bs-ride="carousel">
 <div class="carousel-inner">
 <div class="carousel-item active">
 
- <img src="https://picsum.photos/600/400/?random=10"
+ <img src="./img/project/${productInfo.imgName}"
 			class="d-block w-100"
 			alt="...">
 </div>
