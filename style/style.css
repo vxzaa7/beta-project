@@ -231,6 +231,118 @@ li {
   background-size: cover;
 }
 
+.box__wrap {
+  overflow: hidden;
+  padding: 200px 0 100px 0;
+  width: 70%;
+  margin: 0 auto;
+}
+@media (max-width: 859px) {
+  .box__wrap {
+    padding: 100px 0;
+    width: 90%;
+  }
+}
+.box__wrap .item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 200px;
+}
+@media (max-width: 420px) {
+  .box__wrap .item {
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+}
+.box__wrap .item .pic {
+  width: 55%;
+  flex-shrink: 0;
+}
+@media (max-width: 420px) {
+  .box__wrap .item .pic {
+    width: 100%;
+  }
+}
+.box__wrap .item .pic img {
+  width: 100%;
+  vertical-align: middle;
+}
+.box__wrap .item .txt {
+  background-color: #ccc;
+  width: 55%;
+  flex-shrink: 0;
+  padding: 50px 30px;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: saturate(50%) blur(8px);
+}
+@media (max-width: 420px) {
+  .box__wrap .item .txt {
+    width: 100%;
+  }
+}
+.box__wrap .item .txt:nth-child(1) {
+  background-color: rgba(9, 57, 66, 0.7215686275);
+  color: #fcfcfc;
+}
+.box__wrap .item .txt:nth-child(2) {
+  background-color: rgba(255, 140, 0, 0.696);
+}
+.box__wrap .item .txt h2 {
+  font-size: 1.5rem;
+}
+.box__wrap .item .txt p {
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+.box__wrap .item .txt button {
+  text-align: right;
+  background-color: #093942;
+  border: none;
+  margin-right: 30px;
+  border-radius: 50px;
+  transition: all 0.4s ease-in-out;
+}
+@media (max-width: 859px) {
+  .box__wrap .item .txt button {
+    margin-right: 20px;
+  }
+}
+.box__wrap .item .txt button a {
+  display: inline-block;
+  color: #fcfcfc;
+  padding: 15px 20px;
+  text-decoration: none;
+}
+@media (max-width: 859px) {
+  .box__wrap .item .txt button a {
+    padding: 10px 15px;
+  }
+}
+.box__wrap .item .txt button:hover {
+  background-color: #fcfcfc;
+}
+.box__wrap .item .txt button:hover a {
+  color: #093942;
+}
+@media (max-width: 420px) {
+  .box__wrap .item .txt {
+    padding: 30px 15px;
+  }
+  .box__wrap .item .txt h2 {
+    font-size: 1rem;
+  }
+  .box__wrap .item .txt p {
+    font-size: 0.8rem;
+  }
+}
+.box__wrap .item > :first-child {
+  margin-right: -10%;
+}
+.box__wrap .item:last-child {
+  margin-bottom: 0px;
+}
+
 .info {
   width: 80%;
   display: flex;

@@ -1,0 +1,132 @@
+.box__wrap {
+	overflow: hidden;
+	padding: 200px 0 100px 0;
+	width: 70%;
+	margin: 0 auto;
+
+	@include pad {
+		padding: 100px 0;
+		width: 90%;
+	}
+
+	.item {
+		display: flex;
+		align-items: center;
+		margin-bottom: 200px;
+
+		@include mobile {
+			flex-direction: column;
+			margin-bottom: 100px;
+		}
+
+		.pic {
+			width: 55%;
+			flex-shrink: 0;
+
+			@include mobile {
+				width: 100%;
+			}
+
+			img {
+				width: 100%;
+				vertical-align: middle;
+			}
+		}
+
+		.txt {
+			background-color: #ccc;
+			width: 55%;
+			flex-shrink: 0;
+			padding: 50px 30px;
+			position: relative;
+			z-index: 1;
+
+			@include blur(50%, 8px);
+
+			@include mobile {
+				width: 100%;
+			}
+
+			&:nth-child(1) {
+				background-color: $base-color-open;
+				color: $base-light;
+			}
+
+			&:nth-child(2) {
+				background-color: $base-other-open;
+			}
+
+			h2 {
+				font-size: 1.5rem;
+			}
+
+			p {
+				font-size: 1rem;
+				line-height: 1.6rem;
+			}
+
+			button {
+				text-align: right;
+				background-color: $base-color;
+				border: none;
+				margin-right: 30px;
+				border-radius: 50px;
+				transition: all 0.4s ease-in-out;
+
+				@include pad {
+					margin-right: 20px;
+				}
+
+
+				a {
+					display: inline-block;
+					color: $base-light;
+					padding: 15px 20px;
+					text-decoration: none;
+
+					@include pad {
+						padding: 10px 15px;
+					}
+
+				}
+
+
+
+
+				&:hover {
+					background-color: $base-light;
+
+
+					a {
+						color: $base-color;
+					}
+				}
+			}
+
+
+			@include mobile {
+				padding: 30px 15px;
+
+				h2 {
+					font-size: 1rem;
+				}
+
+				p {
+					font-size: 0.8rem;
+
+				}
+			}
+
+		}
+
+		&>:first-child {
+			margin-right: -10%;
+		}
+
+		&:last-child {
+			margin-bottom: 0px;
+		}
+
+
+	}
+}
