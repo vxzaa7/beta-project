@@ -38,12 +38,12 @@ data-bs-ride="carousel">
 			alt="...">
 </div>
 <div class="carousel-item">
- <img src="https://picsum.photos/600/400/?random=20"
+ <img src="./img/project/${productInfo.imgName2}"
 			class="d-block w-100"
 			alt="...">
 </div>
 <div class="carousel-item">
- <img src="https://picsum.photos/600/400/?random=30"
+ <img src="./img/project/${productInfo.imgName3}"
 			class="d-block w-100"
 			alt="...">
 </div>

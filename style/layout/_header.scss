@@ -3,12 +3,31 @@ header {
 	flex-direction: column;
 	justify-content: space-between;
 	height: 100vh;
-	background-image: url(../img/header/2.jpg);
+	animation: identifier 20s ease-in-out infinite;
 	background-position: center center;
 	background-size: cover;
+	background-repeat: no-repeat;
 
 	@include pad {
 		background-position: right;
+	}
+
+	@keyframes identifier {
+		0% {
+			background-image: url(../img/header/1.jpg);
+		}
+
+		50% {
+			background-image: url(../img/header/2.jpg);
+		}
+
+		75% {
+			background-image: url(../img/header/3.jpg);
+		}
+
+		100% {
+			background-image: url(../img/header/1.jpg);
+		}
 	}
 
 	.title {
